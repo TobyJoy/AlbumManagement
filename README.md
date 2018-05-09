@@ -20,7 +20,7 @@ Things you may want to cover:
 Start the ElasticSearch Engine before executing the Program.
   sudo service elasticsearch start
   
-Currently supporting search of albums only(no search by songs). To Create Index adn to Import data for MusicAlbumModel :-
+Currently supporting search of albums only(no search by songs).
+To Create Index adn to Import data for MusicAlbumModel :-
   __MusicAlbum._elasticsearch_.create_index! force: true__
-  
   __MusicAlbum.import__
