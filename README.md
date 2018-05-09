@@ -5,20 +5,22 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version : __2.5.0__
 
-* System dependencies
+* Rails version : __5.1.6__
 
-* Configuration
+* Database : __PostgreSQL__
 
-* Database creation
+* Testing Framework : __Rspec, FactoryBot__
 
-* Database initialization
+* How to run the test suite : __bundle exec rake spec__
 
-* How to run the test suite
+* Services (job queues, cache servers, search engines, etc.) : __ElasticSearch__
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Start the ElasticSearch Engine before executing the Program.
+  sudo service elasticsearch start
+  
+Currently supporting search of albums only(no search by songs). To Create Index adn to Import data for MusicAlbumModel :-
+  __MusicAlbum._elasticsearch_.create_index! force: true__
+  
+  __MusicAlbum.import__
