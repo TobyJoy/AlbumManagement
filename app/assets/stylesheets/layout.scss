@@ -1,6 +1,3 @@
-
-
-
 @mixin border
 {
 	border:0px solid red;
@@ -10,7 +7,7 @@
 	display:flex; align-items:center;
 }
 
-$app-background : lightgray;
+$app-background : #f1f1f1;
 $app-font : gray;
 $app-font-size : 14px;
 $app-button : #30b55a;
@@ -70,7 +67,7 @@ header
 
 .page-outer-contents
 {
-	float:left; width:100%; background : $app-background; height:100%;
+	float:left; width:100%; height:100%;
   	
   	.page-contents
   		{
