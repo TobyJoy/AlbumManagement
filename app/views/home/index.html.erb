@@ -1,0 +1,17 @@
+<%if !@albums.blank?%>
+	<div class="album-grid">
+		<% @albums.each do |album|%>
+			<div class="album-item">
+				<%=link_to music_album_songs_path(music_album_id: album.id) do %>
+					<div class="album-content">
+						<div class="image"><%=image_tag album.photo_url(:thumb)%></div>
+						<div class="name"><%=album.name%></div>	
+					</div>
+				<%end%>
+			</div>
+		<%end%>
+	</div>
+<%else%>
+	<div class="noRecords"><span class="fa fa-info-circle"></span> No Albums Found</div>
+<%end%>
+

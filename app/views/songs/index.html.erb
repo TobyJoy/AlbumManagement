@@ -1,0 +1,58 @@
+<div class="song-index">
+    <div class="top_sec">
+      <div class="breadcrumbs">
+			<span class="fa fa-home"></span> / Albums / <span class="active">New</span>
+		</div>
+      <div class="top_img_and_detail_div">
+      	<div class="album-desc-section">
+	         <span class="img_div">
+	            <%=image_tag(@album.photo_url, class: "album_cover")%>
+	         </span>
+	         <span class="detail_div">
+	            <span class="album_name"><%=@album.name%></span>
+	            <span class="album_artist"><%= @album.artist %></span>
+	         </span>
+	         <span class="album-buttons-section">
+		         <% if current_user %>
+			         <%=link_to edit_music_album_path(@album) do%>
+			         	<span class="btn btn-primary">Edit</span>
+			         <%end%>
+			         <%=link_to music_album_path(@album), method: :delete do%>
+			         	<span class="btn btn-primary">Delete</span>
+			         <%end%>
+			         <%=link_to new_music_album_song_path(music_album_id: @album.id) do%>
+			         	<span class="btn btn-primary">Add Song</span>
+			         <%end%>
+			     <%end%>
+		     </span>
+	     </div>
+      </div>
+    </div>
+    <div class="bottom_sec">
+        <span class="album_detail">
+            <span class="album_details_heading">About This Album</span>    
+            <span class="album_details_sub_heading">Artist</span>
+            <span class="album_contents"><%= @album.artist %></span>
+            <span class="album_details_sub_heading">Genres</span>
+            <span class="album_contents"><%= @album.genres %></span>
+        </span>
+        <span class="other_album_detail">
+           <%@songs.each do |song|%>
+              <span class="songs_section"> 
+                 <span class="songs_title">
+                 	<span style="float:left;width: auto;"><%= song.song_title %></span>
+                 	<span style="float:left;width: auto;padding-left: 10px;">
+                 		<span class="fa fa-clock" style="padding-right: 3px;"></span>
+                 		<%= song.duration %>
+                 	</span>
+                 </span>
+                 <span class="songs_play">
+                 	<audio controls>
+					  <source src="<%=song.song_attachment%>" type="audio/mpeg">
+					</audio>
+                 </span>
+              </span>
+           <%end%>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+.song-index,.bottom_sec{float:left;width:100%;}
+  
+.song-index{  
+  .top_sec{float:left;width:100%;background:#6f5b92;color:white;}
+  .top_img_and_detail_div{
+    float:left;width:100%;background: linear-gradient(0deg, #e6f2fb, #4d89b1);
+    
+    .img_div{float: left;width: 20%;text-align: center;}
+    .album_cover{height: 209px;width: 240px;border: 2px solid lightgray;}
+    
+    .detail_div
+    {
+      width: 80%;
+      float: right;
+      padding-right: 15px;
+      position: absolute;
+      height: 65%;
+      
+      .album_name{font-size:23px;width:100%;float:left;}
+      .album_artist{font-size:15px;width:100%;float:left;}
+    }
+   }
+   
+   .album-desc-section {
+     float: left;
+     width: 100%;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     position: relative;
+   }
+   
+   .album-buttons-section {
+      float: right;
+      width: 80%;
+      text-align: right;
+      padding: 0 25px;
+      position: absolute;
+      bottom: 20px;
+      height: 18%;
+      padding-top: 5px;
+   }
+  
+  .bottom_sec{
+     padding-top: 40px;
+    .album_detail{
+      float:left;width:30%;padding: 0 0 0 50px;
+      
+      .album_details_heading{width:100%;float:left;font-size:18px;color: silver;}
+      .album_details_sub_heading{width:100%;float:left;font-size:15px;color: silver;}
+      .album_contents{width:100%;float:left;font-size:15px;}
+     }
+     
+     .other_album_detail{
+       float:left;width:70%;padding: 0 10px 5px 0;
+       
+       .songs_section{width:100%;float:left;font-size:18px;border-bottom:1px solid #e1ecf5;color:silver;padding: 5px 5px 5px 20px;}
+       .songs_title{width:100%;font-size:15px;float:left;color: #737373;}
+       .songs_play{width:100%;font-size:13px;float:left;}
+     }
+    
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)
+{
+    .img_div{width: 33% !important;}
+    .detail_div{width: 58% !important;margin-left: 3% !important;}
+}

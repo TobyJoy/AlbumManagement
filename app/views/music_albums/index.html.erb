@@ -1,0 +1,5 @@
+<% if !@albums.blank? %>
+	<% render @albums %>
+<%else%>
+	<%render "shared/insufficient_page"%>
+<%end%>

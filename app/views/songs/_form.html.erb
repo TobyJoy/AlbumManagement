@@ -1,0 +1,10 @@
+<div class="form-wrapper">
+	<div class="page-form">
+		<%= form_with model: @song, url: music_album_songs_path(music_album_id: @album) do |form| %>
+			<div class="row"><%= form.text_field :song_title, class: "form-control", placeholder: "Song Title" %></div>
+			<div class="row"><%= form.text_field :duration, class: "form-control", placeholder: "Duration" %></div>
+			<div class="row"><%= form.file_field :song_attachment, class: "form-control", placeholder: "Upload Song" %></div>
+			<div class="row"><%= form.submit "Submit", :class=>"btn btn-warning" %></div>
+		<%end%>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+<div class="form-wrapper">
+	<div class="page-form">
+		<%= form_with model: @album do |form| %>
+			<div class="row"><%= form.text_field :name, class: "form-control", placeholder: "Name" %></div>
+			<div class="row"><%= form.text_field :genres, class: "form-control", placeholder: "Genres" %></div>
+			<div class="row"><%= form.text_field :artist, class: "form-control", placeholder: "Director" %></div>
+			<div class="row"><%= form.file_field :photo, class: "form-control", placeholder: "Upload photo" %></div>
+			<div class="row"><%= form.submit "Submit", :class=>"btn btn-warning" %></div>
+		<%end%>
+	</div>
+</div>
